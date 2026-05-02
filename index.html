@@ -7,7 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
+ 
   :root {
     --bg: #0a0a0a;
     --bg2: #111111;
@@ -19,9 +19,9 @@
     --muted2: #888;
     --border: rgba(255,255,255,0.07);
   }
-
+ 
   html { scroll-behavior: smooth; }
-
+ 
   body {
     background: var(--bg);
     color: var(--white);
@@ -30,8 +30,7 @@
     overflow-x: hidden;
     cursor: none;
   }
-
-  /* CURSOR */
+ 
   .cursor {
     width: 10px; height: 10px;
     background: var(--accent);
@@ -51,8 +50,7 @@
     transform: translate(-50%, -50%);
     transition: transform 0.12s ease, width 0.3s, height 0.3s;
   }
-
-  /* NAV */
+ 
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; justify-content: space-between; align-items: center;
@@ -65,7 +63,7 @@
     border-color: var(--border);
     backdrop-filter: blur(12px);
   }
-
+ 
   .nav-logo {
     font-family: 'Syne', sans-serif;
     font-weight: 800;
@@ -74,7 +72,7 @@
     color: var(--white);
   }
   .nav-logo span { color: var(--accent); }
-
+ 
   .nav-links { display: flex; gap: 36px; list-style: none; }
   .nav-links a {
     font-size: 0.7rem;
@@ -84,7 +82,7 @@
     transition: color 0.3s;
   }
   .nav-links a:hover { color: var(--accent); }
-
+ 
   .nav-hire {
     font-size: 0.68rem;
     letter-spacing: 0.1em;
@@ -97,15 +95,14 @@
     transition: all 0.3s;
   }
   .nav-hire:hover { background: var(--accent); color: var(--bg); }
-
-  /* HERO */
+ 
   .hero {
     min-height: 100vh;
     display: flex; flex-direction: column; justify-content: center;
     padding: 140px 60px 80px;
     position: relative; overflow: hidden;
   }
-
+ 
   .hero-grid {
     position: absolute; inset: 0;
     background-image:
@@ -114,7 +111,7 @@
     background-size: 60px 60px;
     mask-image: radial-gradient(ellipse at 50% 50%, black 20%, transparent 80%);
   }
-
+ 
   .hero-tag {
     font-size: 0.68rem;
     letter-spacing: 0.2em;
@@ -128,7 +125,7 @@
     width: 24px; height: 1px;
     background: var(--accent);
   }
-
+ 
   .hero-name {
     font-family: 'Syne', sans-serif;
     font-weight: 800;
@@ -139,7 +136,7 @@
     animation: fadeIn 0.8s 0.1s ease both;
   }
   .hero-name .accent { color: var(--accent); }
-
+ 
   .hero-role {
     font-size: clamp(1rem, 2.5vw, 1.6rem);
     color: var(--muted2);
@@ -147,7 +144,7 @@
     margin-bottom: 48px;
     animation: fadeIn 0.8s 0.2s ease both;
   }
-
+ 
   .hero-desc {
     max-width: 480px;
     font-size: 0.78rem;
@@ -157,12 +154,12 @@
     margin-bottom: 56px;
     animation: fadeIn 0.8s 0.3s ease both;
   }
-
+ 
   .hero-actions {
     display: flex; gap: 16px; flex-wrap: wrap;
     animation: fadeIn 0.8s 0.4s ease both;
   }
-
+ 
   .btn-main {
     background: var(--accent);
     color: var(--bg);
@@ -176,7 +173,7 @@
     transition: all 0.3s;
   }
   .btn-main:hover { background: var(--accent2); transform: translateY(-2px); }
-
+ 
   .btn-outline {
     background: none;
     color: var(--white);
@@ -189,7 +186,7 @@
     transition: all 0.3s;
   }
   .btn-outline:hover { border-color: var(--white); }
-
+ 
   .hero-stats {
     position: absolute; right: 60px; bottom: 80px;
     display: flex; flex-direction: column; gap: 32px;
@@ -210,8 +207,7 @@
     text-transform: uppercase;
     margin-top: 4px;
   }
-
-  /* MARQUEE */
+ 
   .marquee-wrap {
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
@@ -241,18 +237,17 @@
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
   }
-
-  /* SERVICES */
+ 
   .services {
     padding: 120px 60px;
     background: var(--bg);
   }
-
+ 
   .section-header {
     display: flex; justify-content: space-between; align-items: flex-end;
     margin-bottom: 64px;
   }
-
+ 
   .section-tag {
     font-size: 0.62rem;
     letter-spacing: 0.3em;
@@ -260,7 +255,7 @@
     text-transform: uppercase;
     margin-bottom: 14px;
   }
-
+ 
   .section-title {
     font-family: 'Syne', sans-serif;
     font-weight: 800;
@@ -268,24 +263,14 @@
     letter-spacing: -0.03em;
     line-height: 1.1;
   }
-
-  .section-link {
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    color: var(--muted2);
-    text-decoration: none;
-    display: flex; align-items: center; gap: 8px;
-    transition: color 0.3s;
-  }
-  .section-link:hover { color: var(--accent); }
-
+ 
   .services-grid {
     display: grid; grid-template-columns: repeat(3, 1fr);
     gap: 1px;
     background: var(--border);
     border: 1px solid var(--border);
   }
-
+ 
   .service-card {
     background: var(--bg);
     padding: 48px 40px;
@@ -293,20 +278,20 @@
     transition: background 0.3s;
   }
   .service-card:hover { background: var(--bg3); }
-
+ 
   .service-num {
     font-size: 0.6rem;
     letter-spacing: 0.2em;
     color: var(--muted);
     margin-bottom: 28px;
   }
-
+ 
   .service-icon {
     font-size: 2rem;
     margin-bottom: 20px;
     display: block;
   }
-
+ 
   .service-name {
     font-family: 'Syne', sans-serif;
     font-weight: 700;
@@ -314,14 +299,14 @@
     margin-bottom: 14px;
     letter-spacing: -0.02em;
   }
-
+ 
   .service-desc {
     font-size: 0.7rem;
     line-height: 1.8;
     color: var(--muted2);
     letter-spacing: 0.04em;
   }
-
+ 
   .service-price {
     margin-top: 28px;
     font-size: 0.65rem;
@@ -329,17 +314,131 @@
     letter-spacing: 0.1em;
   }
 
-  /* PORTFOLIO */
-  .portfolio {
+  /* PRICING SECTION */
+  .pricing {
     padding: 120px 60px;
     background: var(--bg2);
   }
 
+  .pricing-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 24px; margin-top: 64px;
+  }
+
+  .pricing-card {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    padding: 40px 36px;
+    position: relative;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .pricing-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+  .pricing-card.featured {
+    border-color: var(--accent);
+    background: rgba(0,255,136,0.04);
+  }
+
+  .pricing-badge {
+    position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+    background: var(--accent);
+    color: var(--bg);
+    font-size: 0.55rem;
+    letter-spacing: 0.2em;
+    padding: 5px 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .pricing-tier {
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--muted2);
+    margin-bottom: 16px;
+  }
+
+  .pricing-amount {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 3rem;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .pricing-amount span {
+    font-size: 1.2rem;
+    vertical-align: top;
+    margin-top: 8px;
+    display: inline-block;
+  }
+
+  .pricing-name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+
+  .pricing-tagline {
+    font-size: 0.65rem;
+    color: var(--muted2);
+    margin-bottom: 28px;
+    line-height: 1.6;
+  }
+
+  .pricing-divider {
+    height: 1px;
+    background: var(--border);
+    margin-bottom: 24px;
+  }
+
+  .pricing-features {
+    list-style: none;
+    display: flex; flex-direction: column; gap: 12px;
+    margin-bottom: 32px;
+  }
+  .pricing-features li {
+    font-size: 0.68rem;
+    color: var(--muted2);
+    letter-spacing: 0.04em;
+    display: flex; align-items: flex-start; gap: 10px;
+    line-height: 1.5;
+  }
+  .pricing-features li::before {
+    content: '✓';
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .pricing-btn {
+    width: 100%;
+    padding: 14px;
+    background: none;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    cursor: none;
+    transition: all 0.3s;
+    text-transform: uppercase;
+  }
+  .pricing-btn:hover, .pricing-card.featured .pricing-btn {
+    background: var(--accent);
+    color: var(--bg);
+  }
+
+  .portfolio {
+    padding: 120px 60px;
+    background: var(--bg);
+  }
+ 
   .projects-grid {
     display: grid; grid-template-columns: repeat(2, 1fr);
     gap: 24px; margin-top: 64px;
   }
-
+ 
   .project-card {
     background: var(--bg3);
     border: 1px solid var(--border);
@@ -348,7 +447,7 @@
     cursor: none;
   }
   .project-card:hover { border-color: var(--accent); transform: translateY(-4px); }
-
+ 
   .project-thumb {
     height: 200px;
     display: flex; align-items: center; justify-content: center;
@@ -358,7 +457,7 @@
   .project-thumb.p1 { background: linear-gradient(135deg, #1a1410, #2a1a0e); }
   .project-thumb.p2 { background: linear-gradient(135deg, #0a0f1a, #0a1a2a); }
   .project-thumb.p3 { background: linear-gradient(135deg, #0f1a0a, #1a2a0a); }
-
+ 
   .project-info { padding: 28px 32px; }
   .project-tags {
     display: flex; gap: 8px; flex-wrap: wrap;
@@ -395,18 +494,17 @@
     transition: gap 0.3s;
   }
   .project-link:hover { gap: 14px; }
-
-  /* SKILLS */
+ 
   .skills-section {
     padding: 120px 60px;
-    background: var(--bg);
+    background: var(--bg2);
   }
-
+ 
   .skills-grid {
     display: grid; grid-template-columns: 1fr 1fr;
     gap: 60px; margin-top: 64px;
   }
-
+ 
   .skill-group-title {
     font-family: 'Syne', sans-serif;
     font-weight: 700;
@@ -418,7 +516,7 @@
     padding-bottom: 12px;
     border-bottom: 1px solid var(--border);
   }
-
+ 
   .skill-item {
     display: flex; justify-content: space-between; align-items: center;
     padding: 14px 0;
@@ -435,17 +533,14 @@
     background: var(--accent);
     transition: width 1s ease;
   }
-
-  /* CONTACT */
+ 
   .contact {
     padding: 120px 60px;
-    background: var(--bg2);
+    background: var(--bg);
     display: grid; grid-template-columns: 1fr 1fr;
     gap: 80px; align-items: center;
   }
-
-  .contact-left {}
-
+ 
   .contact-email {
     font-family: 'Syne', sans-serif;
     font-weight: 800;
@@ -458,7 +553,7 @@
     transition: color 0.3s;
   }
   .contact-email:hover { color: var(--accent2); }
-
+ 
   .contact-socials {
     display: flex; gap: 20px; margin-top: 40px; flex-wrap: wrap;
   }
@@ -472,7 +567,7 @@
     transition: all 0.3s;
   }
   .social-link:hover { border-color: var(--accent); color: var(--accent); }
-
+ 
   .contact-form { display: flex; flex-direction: column; gap: 16px; }
   .form-input {
     background: var(--bg3);
@@ -488,7 +583,7 @@
   }
   .form-input:focus { border-color: var(--accent); }
   .form-input::placeholder { color: var(--muted); }
-
+ 
   .form-submit {
     background: var(--accent);
     border: none;
@@ -502,8 +597,7 @@
     transition: background 0.3s;
   }
   .form-submit:hover { background: var(--accent2); }
-
-  /* FOOTER */
+ 
   footer {
     padding: 32px 60px;
     border-top: 1px solid var(--border);
@@ -516,31 +610,27 @@
     text-decoration: none; transition: color 0.3s;
   }
   .footer-back:hover { color: var(--accent); }
-
-  /* ANIMATIONS */
+ 
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
-
+ 
   .reveal {
     opacity: 0; transform: translateY(28px);
     transition: opacity 0.7s ease, transform 0.7s ease;
   }
   .reveal.visible { opacity: 1; transform: translateY(0); }
-
-  /* MOBILE */
+ 
   @media (max-width: 768px) {
     nav { padding: 20px 24px; }
     .nav-links { display: none; }
     .hero { padding: 120px 24px 80px; }
     .hero-stats { position: static; flex-direction: row; gap: 32px; margin-top: 48px; }
     .hero-stat { text-align: left; }
-    .services { padding: 80px 24px; }
-    .services-grid { grid-template-columns: 1fr; }
-    .portfolio { padding: 80px 24px; }
+    .services, .pricing, .portfolio, .skills-section { padding: 80px 24px; }
+    .services-grid, .pricing-grid { grid-template-columns: 1fr; }
     .projects-grid { grid-template-columns: 1fr; }
-    .skills-section { padding: 80px 24px; }
     .skills-grid { grid-template-columns: 1fr; gap: 40px; }
     .contact { padding: 80px 24px; grid-template-columns: 1fr; gap: 48px; }
     footer { flex-direction: column; gap: 16px; padding: 24px; text-align: center; }
@@ -551,23 +641,22 @@
 </style>
 </head>
 <body>
-
+ 
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursor-ring"></div>
-
-<!-- NAV -->
+ 
 <nav id="navbar">
   <div class="nav-logo">akash<span>.</span>dev</div>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
+    <li><a href="#pricing">Pricing</a></li>
     <li><a href="#portfolio">Work</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <button class="nav-hire" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Me</button>
 </nav>
-
-<!-- HERO -->
+ 
 <section class="hero">
   <div class="hero-grid"></div>
   <div class="hero-tag">Available for freelance work</div>
@@ -593,8 +682,7 @@
     </div>
   </div>
 </section>
-
-<!-- MARQUEE -->
+ 
 <div class="marquee-wrap">
   <div class="marquee">
     <div class="marquee-item">Restaurant Websites</div>
@@ -615,8 +703,7 @@
     <div class="marquee-item">Mobile Friendly</div>
   </div>
 </div>
-
-<!-- SERVICES -->
+ 
 <section class="services" id="services">
   <div class="section-header reveal">
     <div>
@@ -630,26 +717,87 @@
       <span class="service-icon">🌐</span>
       <div class="service-name">Business Websites</div>
       <p class="service-desc">Clean, fast, mobile-friendly websites for restaurants, salons, shops, and any local business. Ready in 3 days.</p>
-      <div class="service-price">Starting at $100</div>
+      <div class="service-price">Starting at $150</div>
     </div>
     <div class="service-card">
       <div class="service-num">02</div>
       <span class="service-icon">⚡</span>
       <div class="service-name">Landing Pages</div>
       <p class="service-desc">High-converting single pages designed to turn visitors into customers. Perfect for promotions and launches.</p>
-      <div class="service-price">Starting at $75</div>
+      <div class="service-price">Starting at $150</div>
     </div>
     <div class="service-card">
       <div class="service-num">03</div>
       <span class="service-icon">🛠️</span>
       <div class="service-name">Web Tools & Apps</div>
       <p class="service-desc">Custom interactive tools — invoice generators, booking forms, calculators, and more for your business needs.</p>
-      <div class="service-price">Starting at $200</div>
+      <div class="service-price">Starting at $350</div>
     </div>
   </div>
 </section>
 
-<!-- PORTFOLIO -->
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="section-header reveal">
+    <div>
+      <div class="section-tag">Transparent Rates</div>
+      <h2 class="section-title">My Pricing</h2>
+    </div>
+  </div>
+  <div class="pricing-grid reveal">
+    <div class="pricing-card">
+      <div class="pricing-tier">Basic</div>
+      <div class="pricing-amount"><span>$</span>150</div>
+      <div class="pricing-name">Starter Website</div>
+      <div class="pricing-tagline">Perfect for small businesses needing a fast, clean online presence.</div>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li>1-page mobile-friendly website</li>
+        <li>Contact section included</li>
+        <li>Fast 3-day delivery</li>
+        <li>2 rounds of revisions</li>
+        <li>Full source code delivered</li>
+      </ul>
+      <button class="pricing-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get Started →</button>
+    </div>
+    <div class="pricing-card featured">
+      <div class="pricing-badge">Most Popular</div>
+      <div class="pricing-tier">Standard</div>
+      <div class="pricing-amount"><span>$</span>350</div>
+      <div class="pricing-name">Business Website</div>
+      <div class="pricing-tagline">The complete package for businesses that want to make a real impression.</div>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li>3–5 page website</li>
+        <li>Mobile responsive design</li>
+        <li>Contact form included</li>
+        <li>Basic SEO setup</li>
+        <li>5-day delivery</li>
+        <li>5 rounds of revisions</li>
+        <li>1 week of support</li>
+      </ul>
+      <button class="pricing-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get Started →</button>
+    </div>
+    <div class="pricing-card">
+      <div class="pricing-tier">Premium</div>
+      <div class="pricing-amount"><span>$</span>700</div>
+      <div class="pricing-name">Full Custom Website</div>
+      <div class="pricing-tagline">For businesses that want the best — fully custom, polished, and supported.</div>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li>Unlimited pages</li>
+        <li>Booking / enquiry system</li>
+        <li>SEO optimised</li>
+        <li>7-day delivery</li>
+        <li>Unlimited revisions</li>
+        <li>1 month of support</li>
+        <li>Free domain setup help</li>
+      </ul>
+      <button class="pricing-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get Started →</button>
+    </div>
+  </div>
+</section>
+
 <section class="portfolio" id="portfolio">
   <div class="section-header reveal">
     <div>
@@ -677,7 +825,7 @@
           <span class="project-tag">Tool</span>
           <span class="project-tag">JavaScript</span>
         </div>
-        <div class="project-name">Invoice Generator</div>
+        <div class="project-name">InvoiceKit</div>
         <p class="project-desc">A professional invoice creation tool for freelancers and small businesses. Generate and download PDFs instantly.</p>
         <a class="project-link" href="https://akashpoojari1450-crypto.github.io/invoice-generator/" target="_blank">View Live Site →</a>
       </div>
@@ -696,8 +844,7 @@
     </div>
   </div>
 </section>
-
-<!-- SKILLS -->
+ 
 <section class="skills-section" id="skills">
   <div class="section-header reveal">
     <div>
@@ -722,8 +869,7 @@
     </div>
   </div>
 </section>
-
-<!-- CONTACT -->
+ 
 <section class="contact" id="contact">
   <div class="contact-left reveal">
     <div class="section-tag">Get in Touch</div>
@@ -731,7 +877,7 @@
     <a class="contact-email" href="mailto:akashpoojari1450@gmail.com">akashpoojari1450<br>@gmail.com</a>
     <div class="contact-socials">
       <a class="social-link" href="https://github.com/akashpoojari1450-crypto" target="_blank">GitHub</a>
-      <a class="social-link" href="#">Fiverr</a>
+      <a class="social-link" href="https://www.fiverr.com/users/akashs_webdev" target="_blank">Fiverr</a>
       <a class="social-link" href="#">LinkedIn</a>
     </div>
   </div>
@@ -743,25 +889,23 @@
     <button class="form-submit">Send Message →</button>
   </div>
 </section>
-
-<!-- FOOTER -->
+ 
 <footer>
   <div class="footer-copy">© 2026 Akash Poojari. Built with passion.</div>
   <a class="footer-back" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to Top ↑</a>
 </footer>
-
+ 
 <script>
-  // Custom cursor
   const cursor = document.getElementById('cursor');
   const ring = document.getElementById('cursor-ring');
   let mx = 0, my = 0, rx = 0, ry = 0;
-
+ 
   document.addEventListener('mousemove', e => {
     mx = e.clientX; my = e.clientY;
     cursor.style.left = mx + 'px';
     cursor.style.top = my + 'px';
   });
-
+ 
   function animateRing() {
     rx += (mx - rx) * 0.12;
     ry += (my - ry) * 0.12;
@@ -770,13 +914,11 @@
     requestAnimationFrame(animateRing);
   }
   animateRing();
-
-  // Nav scroll
+ 
   window.addEventListener('scroll', () => {
     document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
   });
-
-  // Reveal on scroll
+ 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
